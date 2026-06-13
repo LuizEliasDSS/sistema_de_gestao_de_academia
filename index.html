@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>Carousel Template · Bootstrap v5.3</title>
+    <title>Createfit</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/carousel/"
@@ -17,80 +17,10 @@
     <script src="../assets/js/color-modes.js"></script>
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
-    <link href="carousel.css" rel="stylesheet" />
+    <link href="./assets/styles/styles.css" rel="stylesheet" />
+     <link href="./assets/styles/carousel.css" rel="stylesheet" />
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow:
-          inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
-      }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
-      }
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
+      
     </style>
   </head>
   <body>
@@ -133,7 +63,7 @@
         <svg class="bi my-1 theme-icon-active" aria-hidden="true">
           <use href="#circle-half"></use>
         </svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        <span class="visually-hidden" id="bd-theme-text">Alterar Tema</span>
       </button>
       <ul
         class="dropdown-menu dropdown-menu-end shadow"
@@ -189,10 +119,13 @@
         </li>
       </ul>
     </div>
+
+     <!-- INICIO MENU DE NAVEGAÇÃO-->
+
     <header data-bs-theme="dark">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Carousel</a>
+          <a class="navbar-brand" href="#">CreateFit</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -206,29 +139,61 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
+
+              <!-- MENU ALUNO-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Aluno
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cadastrar_aluno.html">Cadastrar Aluno</a></li>
+            <li><a class="dropdown-item" href="listar_alunos.html">Listar Alunos</a></li>
+           
+          </ul>
+        </li>
+
+          <!-- MENU FIM ALUNO -->
+
+          <!-- MENU INSTRUTOR -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Instrutor
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cadastrar_instrutor.html">Cadastrar Instrutor</a></li>
+            <li><a class="dropdown-item" href="listar_instrutores.html">Listar Instrutores</a></li>
+           
+          </ul>
+        </li>
+
+          <!-- MENU FIM INSTRUTOR -->
             </ul>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Buscar no site"
                 aria-label="Search"
               />
               <button class="btn btn-outline-success" type="submit">
-                Search
+                Buscar
               </button>
             </form>
           </div>
         </div>
       </nav>
     </header>
+
+      <!-- FIM DO MENU NAVEGAÇÃO-->
+
+
+     <!--INICIO DO ESCOPO DO PROJETO-->
+
     <main>
       <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -271,13 +236,12 @@
             </svg>
             <div class="container">
               <div class="carousel-caption text-start">
-                <h1>Example headline.</h1>
+                <h1>CreateFit</h1>
                 <p class="opacity-75">
-                  Some representative placeholder content for the first slide of
-                  the carousel.
+                  Lugar onde você pode encontrar seu físico ideal
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+                  <a class="btn btn-lg btn-primary" href="#">Matricule-se</a>
                 </p>
               </div>
             </div>
@@ -299,12 +263,11 @@
             </svg>
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
+                <h1>Milhares de unidades espalhadas por todo Brasil</h1>
                 <p>
-                  Some representative placeholder content for the second slide
-                  of the carousel.
+                  Encontre a CreateFit mais perto de Você
                 </p>
-                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
               </div>
             </div>
           </div>
@@ -325,13 +288,12 @@
             </svg>
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>One more for good measure.</h1>
+                <h1>Planos Bronze, Gold e Diamond</h1>
                 <p>
-                  Some representative placeholder content for the third slide of
-                  this carousel.
+                  Escolha o Plano que combine com você!
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                  <a class="btn btn-lg btn-primary" href="#">Veja aqui</a>
                 </p>
               </div>
             </div>
@@ -564,6 +526,9 @@
         </p>
       </footer>
     </main>
+
+        <!--FIM DO ESCOPO DO -->
+
     <script
       src="../assets/dist/js/bootstrap.bundle.min.js"
       class="astro-vvvwv3sm"
